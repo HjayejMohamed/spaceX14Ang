@@ -1,0 +1,30 @@
+
+<div class="container">
+    <p class="head"> Ships</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">name</th>
+                <th scope="col">class</th>
+                <th scope="col">model</th>
+                <th scope="col">speed_kn</th>
+                <th scope="col">status</th>
+                <th scope="col"> missions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of allShips$ | async allShips$" >
+                <th scope="row"> {{item.id}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.class}}</td>
+                <td>{{item.model}}</td>
+                <td>{{item.speed_kn}}</td>
+                <td>{{item.status}}</td>
+                <td ><span *ngFor="let shi of item.missions">flight :{{shi.flight}} ,name:{{shi.name}} <br></span></td>
+    
+              
+               
+            </tr>
+        </tbody>
+    </table>

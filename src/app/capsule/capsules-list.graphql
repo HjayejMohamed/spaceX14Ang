@@ -1,0 +1,28 @@
+query  getCapsules{
+    capsules {
+         id
+        landings
+        missions {
+        flight
+        name
+        }
+        original_launch
+        reuse_count
+        status
+        type
+    }
+  }
+query getCapsulesPage($offset:Int!,$limit :Int!){
+    capsules(limit:$limit,offset:$offset){
+        id
+        landings
+        missions {
+        flight
+        name
+        }
+        original_launch
+        reuse_count
+        status
+        type
+  }
+}

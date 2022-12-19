@@ -1,0 +1,31 @@
+
+<div class="container">
+    <p class="head"> Launches</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">details</th>
+                <th scope="col">is_tentative</th>
+                <th scope="col">launch_date_local</th>
+                <th scope="col">launch_site_name</th>
+                <th scope="col">mission_name</th>
+                <th scope="col">ships</th>
+                <th scope="col"> upcoming</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of allLaunchs$ | async allLaunchs$" >
+                <th scope="row"> {{item.id}}</th>
+                <td>{{item.details}}</td>
+                <td>{{item.is_tentative}}</td>
+                <td>{{item.launch_date_local}}</td>
+                <td>{{item.launch_site?.site_name}}</td>
+                <td>{{item.mission_name}}</td>
+                <td ><span *ngFor="let shi of item.ships">id :{{shi.id}} ,name:{{shi.name}} <br></span></td>
+                <td>{{item.upcoming}}</td>
+              
+               
+            </tr>
+        </tbody>
+    </table>

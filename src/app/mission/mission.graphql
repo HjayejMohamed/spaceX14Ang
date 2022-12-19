@@ -1,0 +1,11 @@
+query getMissions{
+  missions {
+    id
+    manufacturers
+    name
+    twitter
+    website
+    description
+  }
+}
+

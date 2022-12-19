@@ -1,0 +1,17 @@
+query getLunches {
+  launches {
+    details
+    id
+    is_tentative
+    launch_date_local
+    launch_site {
+      site_name
+    }
+    mission_name
+    ships {
+      id
+      name
+    }
+    upcoming
+  }
+}
