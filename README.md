@@ -1,7 +1,5 @@
 angular version:14.2.10
 
-ng add apollo-angular@4.0.0
-
 npm -v 7.24.0
 node -v 16.10.0
 
